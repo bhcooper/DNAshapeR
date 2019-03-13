@@ -82,7 +82,7 @@ std::string getDNAShape(std::string fastaFilePath, std::string shapeType){
         current_ss.clear();
         predict_groove_width(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"minor",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
-      	return current_ss
+      	return current_ss.str();
 
       //run Roll
       }else if(shapeType.compare("Roll")==0){
