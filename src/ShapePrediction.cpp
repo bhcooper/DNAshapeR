@@ -90,6 +90,7 @@ std::string getDNAShape(std::string fastaFilePath, std::string shapeType){
         current_ss.clear();
         predict_step_parameters(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"roll",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
+      	return current_ss.str();
 
       //run ProT
       }else if(shapeType.compare("ProT")==0){
@@ -97,6 +98,7 @@ std::string getDNAShape(std::string fastaFilePath, std::string shapeType){
         current_ss.clear();
         predict_groove_width(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"propel",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
+      	return current_ss.str();
 
       //run HelT
       }else if(shapeType.compare("HelT")==0){
@@ -104,6 +106,7 @@ std::string getDNAShape(std::string fastaFilePath, std::string shapeType){
         current_ss.clear();
         predict_step_parameters(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"twist",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
+      	return current_ss.str();
 
       //run EP
       }else if(shapeType.compare("EP")==0){
@@ -111,6 +114,7 @@ std::string getDNAShape(std::string fastaFilePath, std::string shapeType){
         current_ss.clear();
         predict_groove_width(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"ep",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
+      	return current_ss.str();
 
 	  //run mc,md,xrc base parameter
 	  }else if(shapeType.compare("MGD_mc")==0 || shapeType.compare("Stretch")==0 || shapeType.compare("Buckle")==0 ||
