@@ -83,6 +83,7 @@ getShape <- function(filename, shapeType = 'Default', parse = TRUE,
         if( length(shapeType) == 1 && shapeType == 'Default' ) {
             test <- lapply(defaultOpts, getDNAShape, fastaFilePath = filename)
             print(test)
+            names(test) <- defaultOpts
         } else {
             lapply(shapeType, getDNAShape, fastaFilePath = filename)
         }
