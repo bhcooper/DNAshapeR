@@ -90,7 +90,7 @@ getShape <- function(filename, shapeType = 'Default', parse = TRUE,
             pred <- lapply(shapeType, getDNAShape, fastaFilePath = filename)
             pred <- lapply(pred, lapply, as.numeric)
             pred <- lapply(pred, do.call, what="rbind")
-            names(pred) <- defaultOpts
+            names(pred) <- shapeType
             return(pred)
         }
 
