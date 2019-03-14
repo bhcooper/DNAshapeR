@@ -106,7 +106,7 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 		    {
 			std::cout << val << " ";
 		    }
-		    std::cout << endl;
+		    std::cout << '\n';
 		}
 	}
 	      
