@@ -81,11 +81,11 @@ getShape <- function(filename, shapeType = 'Default', parse = TRUE,
         stopifnot( shapeType %in% c( defaultOpts, additionalOpts, 'Default' ) )
 
         if( length(shapeType) == 1 && shapeType == 'Default' ) {
-            test <- lapply(defaultOpts, getDNAShape, fastaFilePath = filename)
-            names(test) <- defaultOpts
-            mat <- do.call("cbind",test[1])
-            print(mat)
-            return(test)
+            pred <- lapply(defaultOpts, getDNAShape, fastaFilePath = filename)
+            pred <- lapply(pred, lapply, as.numeric)
+            pred <- lapply(test, do.call, what="rbind")
+            names(pred) <- defaultOpts
+            return(pred)
         } else {
             lapply(shapeType, getDNAShape, fastaFilePath = filename)
         }
