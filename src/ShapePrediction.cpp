@@ -23,7 +23,7 @@ std::vector<std::string> split(const std::string& s, char delimiter)
 }
 
 // [[Rcpp::export]]
-std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std::string shapeType){
+Rcpp:wrap<std::vector<std::vector<std::string>>> getDNAShape(std::string fastaFilePath, std::string shapeType){
   std::ifstream in_fstream(fastaFilePath.c_str());
   std::string outputFile;
   std::vector<std::vector<std::string>> allOut;
@@ -205,9 +205,9 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
   {
     for(auto &val : line)
     {
-      cout << val << " ";
+      std::cout << val << " ";
     }
-    cout << '\n';
+    std::cout << '\n';
   }
   return wrap(allOut);
 }
