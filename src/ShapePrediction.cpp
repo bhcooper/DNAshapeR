@@ -111,7 +111,7 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
         current_ss.clear();
         predict_step_parameters(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"roll",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
-      	std::vector<std::string> results = split(text.str(), '\n');
+      	std::vector<std::string> results = split(current_ss.str(), '\n');
 	std::vector<std::vector<std::string>> all;
 	all.clear();
 	for (auto &line : results)
@@ -129,7 +129,7 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
         current_ss.clear();
         predict_groove_width(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"propel",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
-      	std::vector<std::string> results = split(text.str(), '\n');
+      	std::vector<std::string> results = split(current_ss.str(), '\n');
 	std::vector<std::vector<std::string>> all;
 	all.clear();
 	for (auto &line : results)
@@ -147,7 +147,7 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
         current_ss.clear();
         predict_step_parameters(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"twist",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
-      	std::vector<std::string> results = split(text.str(), '\n');
+      	std::vector<std::string> results = split(current_ss.str(), '\n');
 	std::vector<std::vector<std::string>> all;
 	all.clear();
 	for (auto &line : results)
@@ -165,7 +165,7 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
         current_ss.clear();
         predict_groove_width(current_ss,pointers_matrix,status_matrix,name_list,debug,pentamers_map,"ep",output_width,delimiter);
         output_stringstream_to_file(current_ss,outputFile);
-      	std::vector<std::string> results = split(text.str(), '\n');
+      	std::vector<std::string> results = split(current_ss.str(), '\n');
 	std::vector<std::vector<std::string>> all;
 	all.clear();
 	for (auto &line : results)
