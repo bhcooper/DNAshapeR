@@ -18,9 +18,7 @@ std::vector<std::string> split(const std::string& s, char delimiter)
    while (std::getline(tokenStream, token, delimiter))
    {
       tokens.push_back(token);
-      std::cout << token << " ";
    }
-   std::cout << '\n';
    return tokens;
 }
 
@@ -104,11 +102,6 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 		if (line[0] != '>')
 		{
 		    allOut.push_back(split(line, ','));
-		    /*for (auto &val : line)
-		    {
-			std::cout << val << " ";
-		    }*/
-		    //std::cout << line << '\n';
 		}
 	}
 	      
@@ -208,6 +201,14 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
         Rcout << "Cannot recogize the shape type(MGW/Roll/HelT/ProT/EP):" << shapeType << std::endl;
       }
   }
-  return allOut;
+  for(auto &line : allOut)
+  {
+    for(auto &val : line)
+    {
+      cout << val << " ";
+    }
+    cout << '\n';
+  }
+  return wrap(allOut);
 }
 
