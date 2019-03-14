@@ -26,14 +26,14 @@ std::vector<std::string> split(const std::string& s, char delimiter)
 std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std::string shapeType){
   std::ifstream in_fstream(fastaFilePath.c_str());
   std::string outputFile;
+  std::vector<std::vector<std::string>> allOut;
+  allOut.clear();
 
   if (!in_fstream){
     Rcout << "Cannot open the input file:  " << fastaFilePath << std::endl;
 
   }else{
 
-    std::vector<std::vector<std::string>> allOut;
-    allOut.clear();
     if(shapeType.compare("MGW")==0 || shapeType.compare("Roll")==0 || shapeType.compare("HelT")==0 ||
       shapeType.compare("ProT")==0 || shapeType.compare("EP")==0 ||
 	  //mc
@@ -201,7 +201,6 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
         Rcout << "Cannot recogize the shape type(MGW/Roll/HelT/ProT/EP):" << shapeType << std::endl;
       }
   }
-
   return allOut;
 }
 
