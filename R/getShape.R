@@ -83,9 +83,9 @@ getShape <- function(filename, shapeType = 'Default', parse = TRUE,
         if( length(shapeType) == 1 && shapeType == 'Default' ) {
             test <- lapply(defaultOpts, getDNAShape, fastaFilePath = filename)
             names(test) <- defaultOpts
-            mat <- do.call("cbind",test)
+            mat <- do.call("cbind",test[1])
             print(mat)
-            return(mat)
+            return(test)
         } else {
             lapply(shapeType, getDNAShape, fastaFilePath = filename)
         }
