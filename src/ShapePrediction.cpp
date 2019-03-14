@@ -101,7 +101,7 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	{
 		if (line[0] != '>')
 		{
-		    allOut.push_back(split(line, ','));
+		    allOut.push_back(split(line.str(), ','));
 		    /*for (auto &val : line)
 		    {
 			std::cout << val << " ";
