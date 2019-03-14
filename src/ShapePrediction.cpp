@@ -7,7 +7,6 @@
 #include "ReadData.h"
 #include "prediction.h"
 #include "SNP.h"
-#include <vector>
 
 using namespace Rcpp;
 
@@ -24,7 +23,7 @@ std::vector<std::string> split(const std::string& s, char delimiter)
 }
 
 // [[Rcpp::export]]
-std::vector<vector<std::string>> getDNAShape(std::string fastaFilePath, std::string shapeType){
+std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std::string shapeType){
   std::ifstream in_fstream(fastaFilePath.c_str());
   std::string outputFile;
 
