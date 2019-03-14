@@ -20,7 +20,7 @@ std::vector<std::string> split(const std::string& s, char delimiter)
       tokens.push_back(token);
       std::cout << token << " ";
    }
-   stc::cout << '\n'
+   std::cout << '\n'
    return tokens;
 }
 
