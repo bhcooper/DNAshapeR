@@ -7,6 +7,7 @@
 #include "ReadData.h"
 #include "prediction.h"
 #include "SNP.h"
+#include <vector>
 
 using namespace Rcpp;
 
