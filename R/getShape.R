@@ -83,11 +83,15 @@ getShape <- function(filename, shapeType = 'Default', parse = TRUE,
         if( length(shapeType) == 1 && shapeType == 'Default' ) {
             pred <- lapply(defaultOpts, getDNAShape, fastaFilePath = filename)
             pred <- lapply(pred, lapply, as.numeric)
-            pred <- lapply(test, do.call, what="rbind")
+            pred <- lapply(pred, do.call, what="rbind")
             names(pred) <- defaultOpts
             return(pred)
         } else {
-            lapply(shapeType, getDNAShape, fastaFilePath = filename)
+            pred <- lapply(shapeType, getDNAShape, fastaFilePath = filename)
+            pred <- lapply(pred, lapply, as.numeric)
+            pred <- lapply(pred, do.call, what="rbind")
+            names(pred) <- defaultOpts
+            return(pred)
         }
 
         if( parse ) {
