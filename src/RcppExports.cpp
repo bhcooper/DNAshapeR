@@ -6,7 +6,7 @@
 using namespace Rcpp;
 
 // getDNAShape
-std::string getDNAShape(std::string fastaFilePath, std::string shapeType);
+std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std::string shapeType);
 RcppExport SEXP _DNAshapeR_getDNAShape(SEXP fastaFilePathSEXP, SEXP shapeTypeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
