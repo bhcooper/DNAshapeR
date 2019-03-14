@@ -18,7 +18,7 @@ std::vector<std::string> split(const std::string& s, char delimiter)
    while (std::getline(tokenStream, token, delimiter))
    {
       tokens.push_back(token);
-      std::cout << token << " "
+      std::cout << token << " ";
    }
    stc::cout << '\n'
    return tokens;
