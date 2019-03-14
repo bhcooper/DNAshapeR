@@ -209,6 +209,6 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
     }
     std::cout << '\n';
   }
-  return *allOut;
+  return allOut;
 }
 
