@@ -12,6 +12,7 @@ using namespace Rcpp;
 
 std::vector<std::string> split(const std::string& s, char delimiter)
 {
+   std::cout << s << '\n'
    std::vector<std::string> tokens;
    std::string token;
    std::istringstream tokenStream(s);
@@ -101,12 +102,12 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	{
 		if (line[0] != '>')
 		{
-		    allOut.push_back(split(line.str(), ','));
+		    allOut.push_back(split(line, ','));
 		    /*for (auto &val : line)
 		    {
 			std::cout << val << " ";
 		    }*/
-		    std::cout << line << '\n';
+		    //std::cout << line << '\n';
 		}
 	}
 	      
