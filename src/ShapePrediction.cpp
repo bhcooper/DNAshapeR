@@ -99,9 +99,10 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	all.clear();
 	for (auto &line : results)
 	{
-	if (line[0] != '>')
-	{
-	    all.push_back(split(line, ','));
+		if (line[0] != '>')
+		{
+		    all.push_back(split(line, ','));
+		}
 	}
       	return all;
       //run Roll
@@ -115,9 +116,10 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	all.clear();
 	for (auto &line : results)
 	{
-	if (line[0] != '>')
-	{
-	    all.push_back(split(line, ','));
+		if (line[0] != '>')
+		{
+		    all.push_back(split(line, ','));
+		}
 	}
       	return all;
 
@@ -132,9 +134,10 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	all.clear();
 	for (auto &line : results)
 	{
-	if (line[0] != '>')
-	{
-	    all.push_back(split(line, ','));
+		if (line[0] != '>')
+		{
+		    all.push_back(split(line, ','));
+		}
 	}
       	return all;
 
@@ -149,9 +152,10 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	all.clear();
 	for (auto &line : results)
 	{
-	if (line[0] != '>')
-	{
-	    all.push_back(split(line, ','));
+		if (line[0] != '>')
+		{
+		    all.push_back(split(line, ','));
+		}
 	}
       	return all;
 
@@ -166,9 +170,10 @@ std::vector<std::vector<std::string>> getDNAShape(std::string fastaFilePath, std
 	all.clear();
 	for (auto &line : results)
 	{
-	if (line[0] != '>')
-	{
-	    all.push_back(split(line, ','));
+		if (line[0] != '>')
+		{
+		    all.push_back(split(line, ','));
+		}
 	}
       	return all;
 
